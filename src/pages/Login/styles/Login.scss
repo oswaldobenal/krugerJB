@@ -1,0 +1,77 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+
+    .login {
+        width: 450px;
+        height: 450px;
+        background: #ffffff5d;
+        background-size: cover;
+        color: rgb(53, 45, 45);
+        backdrop-filter: blur(80%);
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 25px;
+        box-shadow: 2px 5px 5px 5px rgba(38, 39, 39, 0.506);
+
+
+
+        p {
+            font-size: 25px;
+        }
+
+        label {
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        input {
+            padding: 10px 15px;
+            width: 90%;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 10px 15px;
+            width: 90%;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            color: rgb(53, 45, 45);
+            font-size: 20px;
+            margin-top: 50px;
+
+
+        }
+
+
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
