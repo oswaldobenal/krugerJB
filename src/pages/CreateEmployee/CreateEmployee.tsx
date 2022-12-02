@@ -13,6 +13,25 @@ const CreateEmployee: React.FC<CreateEmployeeInterface> = () => {
   const create = (values: User) => {
     const ced = Employees.filter((el) => el.dni === values.dni);
     const id = Employees.filter((el) => el.id === values.id);
+    //Alta de usuarios y passwords
+    const empleado: User = {
+      id: values.id,
+      name: values.name,
+      lastname: values.lastname,
+      dni: values.dni,
+      mail: values.mail,
+      user: values.mail,
+      password: values.dni,
+      rol: values.rol,
+      birth: values.birth,
+      address: values.address,
+      phone: values.phone,
+      vaccinated: values.vaccinated,
+      typeOfVaccine: values.typeOfVaccine,
+      date: values.date,
+      dosis: values.dosis,
+    };
+
     //validacion de id unico.
     if (id.length) {
       alert("Este Id ya se encuentra registrado.");
@@ -20,7 +39,7 @@ const CreateEmployee: React.FC<CreateEmployeeInterface> = () => {
     else if (ced.length) {
       alert("La cedula ya se encuentra registrada.");
     } else {
-      Employees.push(values);
+      Employees.push(empleado);
       alert("Empleado registrado exitosamente");
       navigate("/adminHome");
     }
