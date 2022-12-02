@@ -1,18 +1,24 @@
-import { Employees } from "@/data";
 import { User } from "@/models";
 import { ErrorMessage, Field, Form, Formik, yupToFormErrors } from "formik";
 import React from "react";
 import "./styles/Forms.scss";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import store, { AppStore } from "@/redux/store";
+import { addEmployee } from "@/redux/states";
 
 export interface CreateEmployeeInterface {}
 
 const CreateEmployee: React.FC<CreateEmployeeInterface> = () => {
+  const stateEmployee = useSelector((store: AppStore) => store.employee);
+
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
   const create = (values: User) => {
-    const ced = Employees.filter((el) => el.dni === values.dni);
-    const id = Employees.filter((el) => el.id === values.id);
+    const ced = stateEmployee.filter((el) => el.dni === values.dni);
+    const id = stateEmployee.filter((el) => el.id === values.id);
     //Alta de usuarios y passwords
     const empleado: User = {
       id: values.id,
@@ -39,7 +45,7 @@ const CreateEmployee: React.FC<CreateEmployeeInterface> = () => {
     else if (ced.length) {
       alert("La cedula ya se encuentra registrada.");
     } else {
-      Employees.push(empleado);
+      dispatch(addEmployee([...stateEmployee, empleado]));
       alert("Empleado registrado exitosamente");
       navigate("/adminHome");
     }
