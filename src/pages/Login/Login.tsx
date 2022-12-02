@@ -1,14 +1,25 @@
 import { Employees } from "@/data";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/Login.scss";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addEmployee } from "@/redux/states";
+import store, { AppStore } from "@/redux/store";
 
 export interface LoginInterface {}
 
 const Login: React.FC<LoginInterface> = () => {
   const [user, setUser] = useState({ user: "", password: "" });
 
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    dispatch(addEmployee(Employees));
+  }, []);
+
+  const stateEmployee = useSelector((store: AppStore) => store.employee);
 
   function handleChange(e: any) {
     e.preventDefault();
@@ -23,7 +34,7 @@ const Login: React.FC<LoginInterface> = () => {
     if (user.user === "" || user.password === "") {
       alert("Ingrese todos los campos");
     } else {
-      const userLogin = Employees.filter((el) => {
+      const userLogin = stateEmployee.filter((el) => {
         if (el.user === user.user) {
           return {
             user: el.user,
@@ -41,7 +52,7 @@ const Login: React.FC<LoginInterface> = () => {
         if (userRol === "admin") {
           navigate("/adminHome");
         } else {
-          navigate('/home')
+          navigate("/home");
         }
       } else {
         alert("Usuario o contraseña incorrecto");
