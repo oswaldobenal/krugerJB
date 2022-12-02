@@ -35,6 +35,9 @@ const Home: React.FC<HomeInterface> = () => {
 				<Link to={"/completePerfil"}>
 				<Botton name="Editar Usuario"/>
 				</Link>
+        <Link to={"/"}>
+        <Botton name="Salir" />
+        </Link>
       </HomeLayout>
     </>
   );
