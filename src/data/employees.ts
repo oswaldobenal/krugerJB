@@ -1,8 +1,11 @@
-export const Employees = [
+import { User } from "@/models";
+
+export const Employees:User[] = [
   {
+    id: "1",
     name: "Julian",
     lastname: "Benalcazar",
-    dni: 123456890,
+    dni: "1234567890",
     mail: "julian@email.com",
     user: "admin",
     password: "admin",
@@ -17,9 +20,10 @@ export const Employees = [
   },
 
   {
+    id: "2",
     name: "Luis",
     lastname: "Torres",
-    dni: 123456890,
+    dni: "123456891",
     mail: "luis@email.com",
     user: "luistorres",
     password: "luis123",
@@ -33,9 +37,10 @@ export const Employees = [
     dosis: 2,
   },
   {
+    id: "3",
     name: "Fabio",
     lastname: "Andrade",
-    dni: 123456890,
+    dni: "1234567892",
     mail: "fabio@email.com",
     user: "fabioandrade",
     password: "fabio123",
@@ -49,9 +54,10 @@ export const Employees = [
     dosis: 3,
   },
   {
+    id: "4",
     name: "Sebastian",
     lastname: "Norero",
-    dni: 123456890,
+    dni: "1234567893",
     mail: "sebastian@email.com",
     user: "sebasnorero",
     password: "sebas123",
@@ -65,9 +71,10 @@ export const Employees = [
     dosis: 2,
   },
   {
+    id: "5",
     name: "Matias",
     lastname: "Logoteti",
-    dni: 123456890,
+    dni: "1234567894",
     mail: "matias@email.com",
     user: "matialt",
     password: "mati123",
@@ -81,9 +88,10 @@ export const Employees = [
     dosis: 2,
   },
   {
+    id: "6",
     name: "Lucas",
     lastname: "Paqueta",
-    dni: 123456890,
+    dni: "1234567895",
     mail: "lucas@email.com",
     user: "lucaspa",
     password: "lucas123",
@@ -97,9 +105,10 @@ export const Employees = [
     dosis: 2,
   },
   {
+    id: "7",
     name: "Manuel",
     lastname: "Sanchez",
-    dni: 123456890,
+    dni: "1234567896",
     mail: "manuel@email.com",
     user: "manuzanches",
     password: "manu123",
@@ -113,9 +122,10 @@ export const Employees = [
     dosis: 2,
   },
   {
+    id: "8",
     name: "Vanesa",
     lastname: "Cueva",
-    dni: 123456890,
+    dni: "1234567897",
     mail: "vane@email.com",
     user: "vanessa",
     password: "vane123",
@@ -129,9 +139,10 @@ export const Employees = [
     dosis: 2,
   },
   {
+    id: "9",
     name: "Josselyn",
     lastname: "Vaca",
-    dni: 123456890,
+    dni: "1234567898",
     mail: "jmikaela@email.com",
     user: "jossmikaela",
     password: "joss123",
@@ -145,9 +156,10 @@ export const Employees = [
     dosis: 2,
   },
   {
+    id: "10",
     name: "Alejandra",
     lastname: "Garzon",
-    dni: 123456890,
+    dni: "1234567899",
     mail: "alejandra@email.com",
     user: "alejandra",
     password: "ale123",
@@ -161,9 +173,10 @@ export const Employees = [
     dosis: 2,
   },
   {
+    id: "11",
     name: "Jorge",
     lastname: "Roldam",
-    dni: 123456890,
+    dni: "1234567880",
     mail: "jorge@email.com",
     user: "jorgerd1",
     password: "jr123",
@@ -177,9 +190,10 @@ export const Employees = [
     dosis: 2,
   },
   {
+    id: "12",
     name: "Danilo",
     lastname: "Salcedo",
-    dni: 123456890,
+    dni: "123456881",
     mail: "danny@email.com",
     user: "dannys",
     password: "danny123",
