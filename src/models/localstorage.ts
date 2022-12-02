@@ -1,3 +1,4 @@
 export enum LocalStorageTypes {
   EMPLOYEE = "employee",
+  EMPLOYEELOGIN = "employeeLogin",
 }
