@@ -1,10 +1,18 @@
 import { User } from "@/models";
+import { AppStore } from "@/redux/store";
+import { ButtonContainer } from "@/styled-components";
 import { Field, Form, Formik } from "formik";
 import React from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import "../CreateEmployee/styles/Forms.scss";
 export interface CompletePerfilInterface {}
 
 const CompletePerfil: React.FC<CompletePerfilInterface> = () => {
+  const navigate = useNavigate();
+  const userLogin = useSelector((store: AppStore) => store.employeLogin);
+
+  const dni = userLogin[0].dni;
   const create = (values: User) => {
     console.log(values);
   };
@@ -13,21 +21,21 @@ const CompletePerfil: React.FC<CompletePerfilInterface> = () => {
     <div>
       <Formik
         initialValues={{
-          id: "",
-          name: "",
-          lastname: "",
-          dni: "",
-          mail: "",
-          user: "",
-          password: "",
-          rol: "",
-          birth: "",
-          address: "",
-          phone: "",
-          vaccinated: true,
-          typeOfVaccine: "",
-          date: "",
-          dosis: 0,
+          id: userLogin[0].id,
+          name: userLogin[0].name,
+          lastname: userLogin[0].lastname,
+          dni: userLogin[0].dni,
+          mail: userLogin[0].mail,
+          user: userLogin[0].user,
+          password: userLogin[0].password,
+          rol: userLogin[0].rol,
+          birth: userLogin[0].birth,
+          address: userLogin[0].address,
+          phone: userLogin[0].phone,
+          vaccinated: userLogin[0].vaccinated,
+          typeOfVaccine: userLogin[0].typeOfVaccine,
+          date: userLogin[0].date,
+          dosis: userLogin[0].dosis,
         }}
         onSubmit={create}
       >
@@ -61,14 +69,6 @@ const CompletePerfil: React.FC<CompletePerfilInterface> = () => {
             <label htmlFor="password">
               Password
               <Field name="password" type="password" id="password" />
-            </label>
-
-            <label htmlFor="rol">
-              Rol
-              <Field name="rol" as="select" id="rol">
-                <option value="admin">Admin</option>
-                <option value="employee">Employee</option>
-              </Field>
             </label>
 
             <label htmlFor="birth">
@@ -113,7 +113,10 @@ const CompletePerfil: React.FC<CompletePerfilInterface> = () => {
               Numero de dosis
               <Field name="dosis" type="text" id="dosis" />
             </label>
-            <button type="submit">Crear</button>
+            <ButtonContainer>
+              <button type="submit">Guardar</button>
+              <button onClick={()=> navigate("/home") }>Canselar</button>
+            </ButtonContainer>
           </Form>
         </div>
       </Formik>

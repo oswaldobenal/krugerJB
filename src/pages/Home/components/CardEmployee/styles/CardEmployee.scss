@@ -1,0 +1,25 @@
+.cardemployee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 5px #bbb;
+  padding: 15px;
+
+  label {
+    display: flex;
+    width: 100%;
+    padding: 10px 15px;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+  }
+
+  .title {
+    background-color: #fff;
+    font-size: 18px;
+    color: rgb(204, 158, 98);
+  }
+}

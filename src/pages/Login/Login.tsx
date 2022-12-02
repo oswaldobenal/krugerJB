@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./styles/Login.scss";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addEmployee } from "@/redux/states";
+import { addEmployee, setLogin } from "@/redux/states";
 import store, { AppStore } from "@/redux/store";
 
 export interface LoginInterface {}
@@ -49,6 +49,8 @@ const Login: React.FC<LoginInterface> = () => {
       const userRol = userLogin[0].rol;
 
       if (userName === user.user && userPass === user.password) {
+        //Ingresar al local storage los datos del usuario logeado.
+        dispatch(setLogin(userLogin));
         if (userRol === "admin") {
           navigate("/adminHome");
         } else {
