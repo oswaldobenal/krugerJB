@@ -1,5 +1,5 @@
 import "./App.css";
-import { AdminHome, Home, Login } from "./pages";
+import { AdminHome, CompletePerfil, CreateEmployee, Home, Login } from "./pages";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -9,6 +9,8 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/adminHome" element={<AdminHome />} />
+        <Route path="/createEmployee" element={<CreateEmployee />} />
+        <Route path="/completePerfil" element={<CompletePerfil />} />
 
       </Routes>
     </>
