@@ -115,7 +115,7 @@ const CompletePerfil: React.FC<CompletePerfilInterface> = () => {
             </label>
             <ButtonContainer>
               <button type="submit">Guardar</button>
-              <button onClick={()=> navigate("/home") }>Canselar</button>
+              <button onClick={()=> navigate("/home") }>Cancelar</button>
             </ButtonContainer>
           </Form>
         </div>

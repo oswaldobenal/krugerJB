@@ -1,10 +1,11 @@
 .button {
-    padding: 15px 25px;
+    height: 55px;
     width: 45%;
     margin-top: 45px;
     background: none;
     border: 1px solid #ddd;
     transition: ease-out 0.5s;
+    margin-right: 15px;
     
     
     &:hover {
