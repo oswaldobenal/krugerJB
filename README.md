@@ -13,7 +13,7 @@ Clean Architecture y Atomic Design.
 - ✨Magic ✨
 
 
-## _Tecnologias usadas
+## _Tecnologias usadas_
 
 - JavaScript.
 - TypeScript.
@@ -27,7 +27,7 @@ Clean Architecture y Atomic Design.
 - pnpm
 - entre otras.
 
-## _Primeros pasos para la creacion
+## _Primeros pasos para la creacion_
 
 - En la terminal...
 
@@ -59,15 +59,19 @@ La plantilla del proyecto queda lista para empezar a trabajar.
 
 una vez ya tengamos el repositorio en nuestra maquina correr los siguientes comandos en la terminal:
 
+
+> este comando sirve para instalar todas las dependencias necesarias de nuestro proyecto.
+
 ```sh
 pmpm i 
 ```
-> este comando sirve para instalar todas las dependencias necesarias de nuestro proyecto.
+
+> este comando inicia la aplicacion.
 
 ```sh
 pnpm dev
 ``` 
-> este comando inicia la aplicacion.
+
 
 
 
