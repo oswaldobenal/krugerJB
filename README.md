@@ -60,17 +60,38 @@ La plantilla del proyecto queda lista para empezar a trabajar.
 una vez ya tengamos el repositorio en nuestra maquina correr los siguientes comandos en la terminal:
 
 
-> este comando sirve para instalar todas las dependencias necesarias de nuestro proyecto.
+ este comando sirve para instalar todas las dependencias necesarias de nuestro proyecto.
+
 
 ```sh
 pmpm i 
 ```
 
-> este comando inicia la aplicacion.
+
+este comando inicia la aplicacion.
+
 
 ```sh
 pnpm dev
 ``` 
+
+Una vez iniciada la app deberemos logearnos.
+
+Para el usuario administrador usaremos los siguientes datos.
+
+usuario
+- admin
+
+password
+- admin
+
+Para el empleado normal usaremos:
+
+usuario
+- dannys
+
+password
+- danny123
 
 
 

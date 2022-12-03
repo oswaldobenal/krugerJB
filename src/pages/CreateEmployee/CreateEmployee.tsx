@@ -116,7 +116,7 @@ const CreateEmployee: React.FC<CreateEmployeeInterface> = () => {
 
               <label htmlFor="dni">
                 DNI
-                <Field name="dni" type="number" id="dni" />
+                <Field name="dni" type="text" id="dni" />
               </label>
               <ErrorMessage
                 name="dni"
